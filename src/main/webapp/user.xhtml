@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"> 
+
+<h:head>
+	<style type="text/css">
+		.ui-widget,.ui-widget .ui-widget {
+			font-size: 12px !important;
+		}
+	</style>
+</h:head> 
+<body> 
+	<p:panel header="Kullanici Tanimlama"> 
+		<p:messages autoUpdate="true"/>
+		<h:form id="userForm">
+			<h:panelGrid columns="2">
+				Ad : <p:inputText value="#{userBean.user.name}" id="name"/>
+				Soyad : <p:inputText value="#{userBean.user.lastname}" id="lastname"/>
+				Yas : <p:inputText value="#{userBean.user.age}" id="age"/>
+			
+				<p:commandButton value="Kaydet" action="#{userBean.save}" update="@form :listForm" rendered="#{userBean.user.id == null}" id="save"/>
+				<p:commandButton value="Düzenle" action="#{userBean.update}" update="@form :listForm" rendered="#{userBean.user.id != null}" id="update"/>
+			</h:panelGrid>
+		</h:form>
+		
+		<h:form id="listForm">
+			<p:dataTable value="#{userBean.userList}" var="kul" id="liste">
+				
+				<p:column headerText="Sil">
+					<p:commandLink value="Sil" action="#{userBean.remove(kul)}" update="@form" id="remove"/>
+				</p:column>
+			
+				<p:column headerText="Seç">
+					<p:commandLink value="Seç" action="#{userBean.select(kul)}" update=":userForm"/>
+				</p:column>
+			
+				<p:column headerText="Id">
+					#{kul.id}
+				</p:column>
+			
+				<p:column headerText="Ad">
+					#{kul.name}
+				</p:column>
+			
+				<p:column headerText="Soyad">
+					#{kul.lastname}
+				</p:column>
+			
+				<p:column headerText="Yas">
+					#{kul.age}  
+				</p:column>
+			
+			</p:dataTable>
+		
+		</h:form>
+		
+	</p:panel>
+</body> 
+</html>

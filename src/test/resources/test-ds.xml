@@ -11,7 +11,7 @@
       <connection-url>jdbc:mysql://localhost:3306/tdd_test</connection-url>
         <driver>mysql</driver>
         <security>
-		      <user-name>Saha</user-name>	
+		      <user-name>saha</user-name>	
 		      <password>satisSistemi</password>
         </security>
    </datasource>

@@ -20,5 +20,5 @@ public class UserWS {
 	
 		userService.save(user);
 	}
-	
+	 
 }

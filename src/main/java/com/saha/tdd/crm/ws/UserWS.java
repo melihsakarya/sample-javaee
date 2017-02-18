@@ -8,9 +8,9 @@ import com.saha.tdd.crm.entity.User;
 import com.saha.tdd.crm.service.UserService;
 
 @WebService
-public class KullaniciWS {
+public class UserWS {
 
-	@Inject UserService kullaniciService;
+	@Inject UserService userService;
 	
 	@WebMethod
 	public void kaydet(String name, String lastname){
@@ -18,7 +18,7 @@ public class KullaniciWS {
 		user.setName(name);
 		user.setLastname(lastname);
 	
-		kullaniciService.save(user);
+		userService.save(user);
 	}
 	
 }

@@ -26,5 +26,5 @@ public class UserRS {
 		return Response.status(201).entity(user).build();
 
 	}
-	
+
 }

@@ -24,7 +24,7 @@ public class UserRS {
 		userService.save(user);
 
 		return Response.status(201).entity(user).build();
-
+ 
 	}
 
 }

@@ -20,7 +20,6 @@
 				Ad : <p:inputText value="#{userBean.user.name}" id="name"/>
 				Soyad : <p:inputText value="#{userBean.user.lastname}" id="lastname"/>
 				Yas : <p:inputText value="#{userBean.user.age}" id="age"/>
-				Dogum Yeri : <p:inputText value="" id="dogumYeri"/>
 			
 				<p:commandButton value="Kaydet" action="#{userBean.save}" update="@form :listForm" rendered="#{userBean.user.id == null}" id="save"/>
 				<p:commandButton value="Düzenle" action="#{userBean.update}" update="@form :listForm" rendered="#{userBean.user.id != null}" id="update"/>

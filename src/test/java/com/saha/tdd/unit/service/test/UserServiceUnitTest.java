@@ -24,6 +24,6 @@ public class UserServiceUnitTest {
 		user.setName("Melih");
 		user.setLastname("Sakarya");
 		user.setAge(35);
-		Assert.assertTrue(userService.save(user));
+		Assert.assertTrue(!userService.save(user));
 	}
 }

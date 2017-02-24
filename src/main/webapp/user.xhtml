@@ -19,7 +19,7 @@
 			<h:panelGrid columns="2">
 				Ad : <p:inputText value="#{userBean.user.name}" id="name"/>
 				Soyad : <p:inputText value="#{userBean.user.lastname}" id="lastname"/>
-				Yas : <p:inputText value="#{userBean.user.age}" id="age"/>
+				Yas-2 : <p:inputText value="#{userBean.user.age}" id="age"/>
 			
 				<p:commandButton value="Kaydet" action="#{userBean.save}" update="@form :listForm" rendered="#{userBean.user.id == null}" id="save"/>
 				<p:commandButton value="Düzenle" action="#{userBean.update}" update="@form :listForm" rendered="#{userBean.user.id != null}" id="update"/>

@@ -1,5 +1,7 @@
 package com.saha.tdd.crm.rs;
 
+import java.util.List;
+
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -11,6 +13,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import com.saha.tdd.crm.entity.Urun;
+import com.saha.tdd.crm.entity.User;
 import com.saha.tdd.crm.service.UrunService;
 
 @Path("/product")
@@ -49,4 +52,10 @@ public class ProductRS {
 	}
 
 
+	@GET
+	@Path("/list")
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<Urun> list() {
+		return productService.list();
+	}
 }

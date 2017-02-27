@@ -11,42 +11,42 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import com.saha.tdd.crm.entity.Urun;
-import com.saha.tdd.crm.entity.User;
-import com.saha.tdd.crm.service.UserService;
+import com.saha.tdd.crm.service.UrunService;
 
-@Path("/user")
+@Path("/product")
 @Consumes(MediaType.APPLICATION_JSON)
-public class UserRS {
+public class ProductRS {
 
-	
-	@Inject UserService userService;
-	
+	@Inject
+	UrunService productService;
+
 	@POST
 	@Path("/add")
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response addUser(User user) {
+	public Response add(Urun urun) {
 
-		userService.save(user);
+		productService.save(urun);
 
-		return Response.status(201).entity(user).build();
- 
+		return Response.status(201).entity(urun).build();
+
 	}
-	
+
 	@GET
 	@Path("/remove/{id}")
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Boolean remove(@PathParam("id") Long id) {
 
-		User user = userService.find(id);
-		return userService.remove(user);
+		Urun urun = productService.find(id);
+		return productService.remove(urun);
 
 	}
 
 	@GET
 	@Path("/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public User getUserById(@PathParam("id") Long id) {
-		return userService.find(id);
+	public Urun getProductById(@PathParam("id") Long id) {
+		return productService.find(id);
 	}
+
 
 }

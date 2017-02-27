@@ -12,9 +12,14 @@ public class UrunService extends GenericService<Urun>{
 
 	@Inject UrunDao urunDao;
 	
+	
 	@Override
 	public GenericDao<Urun> getDao() {
 		return urunDao;
 	}
 
+	
+	public Urun find(Long id){
+		return getDao().getEntityManager().find(Urun.class, id);
+	}
 }

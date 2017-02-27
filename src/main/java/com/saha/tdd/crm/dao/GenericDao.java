@@ -36,6 +36,10 @@ public abstract class GenericDao<E> implements Serializable {
 		entityManager.refresh(obj);
 	}
 	
+	
+	public EntityManager getEntityManager(){
+		return this.entityManager;
+	}
 }
 
 

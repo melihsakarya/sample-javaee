@@ -9,6 +9,7 @@ import javax.inject.Inject;
 
 import com.saha.tdd.crm.dao.GenericDao;
 import com.saha.tdd.crm.dao.UserDao;
+import com.saha.tdd.crm.entity.Urun;
 import com.saha.tdd.crm.entity.User;
 
 @Stateful
@@ -24,6 +25,9 @@ public class UserService extends GenericService<User> implements Serializable{
 	}
 
 	
+	public User find(Long id){
+		return getDao().getEntityManager().find(User.class, id);
+	}
 }
 
 

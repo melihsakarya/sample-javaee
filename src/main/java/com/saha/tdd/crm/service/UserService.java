@@ -16,11 +16,9 @@ import com.saha.tdd.crm.entity.User;
 @TransactionAttribute(TransactionAttributeType.REQUIRED)
 public class UserService extends GenericService<User> implements Serializable{
 
-//	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 	@Inject UserDao userDao;
 	
-	String sample;
-
 	@Override
 	public GenericDao<User> getDao() {
 		return userDao;

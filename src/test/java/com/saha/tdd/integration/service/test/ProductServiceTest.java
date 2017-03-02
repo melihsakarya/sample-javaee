@@ -13,13 +13,13 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import com.saha.tdd.crm.dao.UserDao;
-import com.saha.tdd.crm.entity.Urun;
+import com.saha.tdd.crm.entity.Product;
 import com.saha.tdd.crm.entity.User;
-import com.saha.tdd.crm.service.UrunService;
+import com.saha.tdd.crm.service.ProductService;
 import com.saha.tdd.crm.service.UserService;
 
 @RunWith(Arquillian.class)
-public class UrunServiceTest {
+public class ProductServiceTest {
 
 
 	@Deployment
@@ -34,15 +34,15 @@ public class UrunServiceTest {
     }
 	
 	
-	@Inject UrunService urunService;
+	@Inject ProductService productService;
 	
 	@Test
-	public void urunKayitTest(){
-		Urun urun = new Urun();
-		urun.setName("IPhone");
+	public void productSaveTest(){
+		Product product = new Product();
+		product.setName("IPhone");
 		
-		urunService.save(urun);
-		Assert.assertNotNull(urun.getId());
+		productService.save(product);
+		Assert.assertNotNull(product);
 	}
 }
 

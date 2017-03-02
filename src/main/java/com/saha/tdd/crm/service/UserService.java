@@ -9,7 +9,6 @@ import javax.inject.Inject;
 
 import com.saha.tdd.crm.dao.GenericDao;
 import com.saha.tdd.crm.dao.UserDao;
-import com.saha.tdd.crm.entity.Urun;
 import com.saha.tdd.crm.entity.User;
 
 @Stateful

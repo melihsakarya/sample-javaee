@@ -3,7 +3,7 @@ package com.saha.tdd.crm.entity;
 import javax.persistence.Entity;
 
 @Entity
-public class Product extends BaseEntity{
+public class Category extends BaseEntity{
 
 	/**
 	 * 

@@ -27,10 +27,10 @@ public abstract class GenericDao<E> implements Serializable {
 
 	@SuppressWarnings("unchecked")
 	public List<E> list() {
-		return entityManager.createQuery(getSorgu()).getResultList();
+		return entityManager.createQuery(getQuery()).getResultList();
 	}
 
-	public abstract String getSorgu();
+	public abstract String getQuery();
 	
 	public void refresh(E obj){
 		entityManager.refresh(obj);

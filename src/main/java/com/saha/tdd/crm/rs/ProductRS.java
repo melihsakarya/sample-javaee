@@ -12,25 +12,24 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import com.saha.tdd.crm.entity.Urun;
-import com.saha.tdd.crm.entity.User;
-import com.saha.tdd.crm.service.UrunService;
+import com.saha.tdd.crm.entity.Product;
+import com.saha.tdd.crm.service.ProductService;
 
 @Path("/product")
 @Consumes(MediaType.APPLICATION_JSON)
 public class ProductRS {
 
 	@Inject
-	UrunService productService;
+	ProductService productService;
 
 	@POST
 	@Path("/add")
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response add(Urun urun) {
+	public Response add(Product product) {
 
-		productService.save(urun);
+		productService.save(product);
 
-		return Response.status(201).entity(urun).build();
+		return Response.status(201).entity(product).build();
 
 	}
 
@@ -39,7 +38,7 @@ public class ProductRS {
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Boolean remove(@PathParam("id") Long id) {
 
-		Urun urun = productService.find(id);
+		Product urun = productService.find(id);
 		return productService.remove(urun);
 
 	}
@@ -47,7 +46,7 @@ public class ProductRS {
 	@GET
 	@Path("/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Urun getProductById(@PathParam("id") Long id) {
+	public Product getProductById(@PathParam("id") Long id) {
 		return productService.find(id);
 	}
 
@@ -55,7 +54,7 @@ public class ProductRS {
 	@GET
 	@Path("/list")
 	@Produces(MediaType.APPLICATION_JSON)
-	public List<Urun> list() {
+	public List<Product> list() {
 		return productService.list();
 	}
 }

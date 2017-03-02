@@ -2,15 +2,15 @@ package com.saha.tdd.crm.dao;
 
 import javax.ejb.Stateless;
 
-import com.saha.tdd.crm.entity.Product;
+import com.saha.tdd.crm.entity.Category;
 
 @Stateless
-public class ProductDao extends GenericDao<Product>{
+public class CategoryDao extends GenericDao<Category>{
 
 	@Override
 	public String getQuery() {
 		// TODO Auto-generated method stub
-		return "from Product";
+		return "from Category";
 	}
 
 }

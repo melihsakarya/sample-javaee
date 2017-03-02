@@ -12,7 +12,7 @@ public class UserDao extends GenericDao<User> implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Override
-	public String getSorgu() {
+	public String getQuery() {
 		return "from User";
 	}
 

@@ -4,22 +4,22 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 
 import com.saha.tdd.crm.dao.GenericDao;
-import com.saha.tdd.crm.dao.UrunDao;
-import com.saha.tdd.crm.entity.Urun;
+import com.saha.tdd.crm.dao.ProductDao;
+import com.saha.tdd.crm.entity.Product;
 
 @Stateless
-public class UrunService extends GenericService<Urun>{
+public class ProductService extends GenericService<Product>{
 
-	@Inject UrunDao urunDao;
+	@Inject ProductDao productDao;
 	
 	
 	@Override
-	public GenericDao<Urun> getDao() {
-		return urunDao;
+	public GenericDao<Product> getDao() {
+		return productDao;
 	}
 
 	
-	public Urun find(Long id){
-		return getDao().getEntityManager().find(Urun.class, id);
+	public Product find(Long id){
+		return getDao().getEntityManager().find(Product.class, id);
 	}
 }

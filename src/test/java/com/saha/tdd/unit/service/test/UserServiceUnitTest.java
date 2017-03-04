@@ -27,3 +27,4 @@ public class UserServiceUnitTest {
 		Assert.assertTrue(userService.save(user));
 	}
 }
+

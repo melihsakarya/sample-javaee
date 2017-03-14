@@ -29,6 +29,12 @@ public class UserService extends GenericService<User> implements Serializable{
 	}
 	
 	
+	@Override
+	public boolean save(User obj) {
+		if(obj.getName() == null)
+			return false;
+		return super.save(obj);
+	}
 	
 
 	int topla(int x, int y){

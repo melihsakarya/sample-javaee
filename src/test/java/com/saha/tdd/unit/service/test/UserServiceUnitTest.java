@@ -26,5 +26,13 @@ public class UserServiceUnitTest {
 		user.setAge(35);
 		Assert.assertTrue(userService.save(user));
 	}
+	
+	@Test
+	public void saveUserNameControlTest(){
+		User user = new User();
+		user.setLastname("Sakarya");
+		user.setAge(35);
+		Assert.assertFalse(userService.save(user));
+	}
 }
 

@@ -17,7 +17,7 @@ import com.saha.tdd.crm.entity.User;
 import com.saha.tdd.crm.service.UserService;
 
 @RunWith(Arquillian.class)
-public class UserServiceTest extends BaseIntegrationTest {
+public class UserServiceTest  {
 
 	
 	@Deployment

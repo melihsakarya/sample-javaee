@@ -19,7 +19,7 @@ import com.saha.tdd.crm.service.ProductService;
 import com.saha.tdd.crm.service.UserService;
 
 @RunWith(Arquillian.class)
-public class ProductServiceTest extends BaseIntegrationTest{
+public class ProductServiceTest {
 
 	@Deployment
     public static Archive<?> createTestArchive() {

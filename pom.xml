@@ -27,6 +27,7 @@
 		<maven.compiler.source>1.6</maven.compiler.source>
 
 		<sonar.host.url>http://34.251.30.41:9000/</sonar.host.url>
+		<sonar.exclusions>src/main/webapp/****/*.js</sonar.exclusions>
 
 		<version.jacoco>0.7.8</version.jacoco>
 		<version.arquillian_jacoco>1.0.0.Alpha9</version.arquillian_jacoco>
@@ -220,22 +221,6 @@
 
 			</plugin>
 
-			<plugin>
-				<groupId>com.sebastian-daschner</groupId>
-				<artifactId>jaxrs-analyzer-maven-plugin</artifactId>
-				<version>0.9</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>analyze-jaxrs</goal>
-						</goals>
-						<configuration>
-							<!-- Available backends are plaintext (default), swagger and asciidoc -->
-							<backend>swagger</backend>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 
 		</plugins>
 

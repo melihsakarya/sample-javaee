@@ -20,7 +20,16 @@ import com.saha.tdd.crm.service.UserService;
 public class UserServiceTest extends BaseIntegrationTest {
 
 	
-
+	@Deployment
+    public static Archive<?> createTestArchive() {
+        return ShrinkWrap.create(WebArchive.class, "test.war")
+                .addPackage(User.class.getPackage())
+                .addPackage(UserDao.class.getPackage())
+                .addPackage(UserService.class.getPackage())
+                .addAsResource("META-INF/test-persistence.xml", "META-INF/persistence.xml")
+                .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
+                .addAsWebInfResource("test-ds.xml");
+    }
 		
 		@Inject UserService userService;
 		

@@ -200,10 +200,15 @@
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
 			</plugin>
+			<!-- <plugin> -->
+			<!-- <groupId>org.jboss.as.plugins</groupId> -->
+			<!-- <artifactId>jboss-as-maven-plugin</artifactId> -->
+			<!-- <version>${version.jboss.maven.plugin}</version> -->
+			<!-- </plugin> -->
 			<plugin>
-				<groupId>org.jboss.as.plugins</groupId>
-				<artifactId>jboss-as-maven-plugin</artifactId>
-				<version>${version.jboss.maven.plugin}</version>
+				<groupId>org.wildfly.plugins</groupId>
+				<artifactId>wildfly-maven-plugin</artifactId>
+				<version>1.2.0.Alpha4</version>
 			</plugin>
 
 			<plugin>

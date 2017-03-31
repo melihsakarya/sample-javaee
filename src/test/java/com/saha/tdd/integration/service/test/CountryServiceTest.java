@@ -44,7 +44,7 @@ public class CountryServiceTest  {
 			countryService.save(country);
 			
 			Assert.assertNotNull(country.getId());
-			Assert.assertThat(country.getId(), is(greaterThan(1L)));
+			Assert.assertThat(country.getId(), is(greaterThan(0L)));
 		}
 		
 

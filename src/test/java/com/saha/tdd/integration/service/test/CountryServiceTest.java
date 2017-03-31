@@ -1,6 +1,7 @@
 package com.saha.tdd.integration.service.test;
 
 import javax.inject.Inject;
+import static org.hamcrest.Matchers.*;
 
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
@@ -41,6 +42,9 @@ public class CountryServiceTest  {
 			country.setName("Istanbul");
 			
 			countryService.save(country);
+			
+			Assert.assertNotNull(country.getId());
+			Assert.assertThat(country.getId(), is(greaterThan(100L)));
 		}
 		
 

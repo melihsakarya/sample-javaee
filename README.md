@@ -2,4 +2,3 @@
 Sample Java EE Integration Test Sample
 
 
-sample text

@@ -214,7 +214,7 @@
 					<hostname>172.17.0.4</hostname>
 					<username>admin</username>
 					<password>8sFLdIwyxiXD</password>
-					<port>9990</port>
+					<port>9999</port>
 				</configuration>
 			</plugin>
 

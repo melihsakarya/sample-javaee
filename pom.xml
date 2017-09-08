@@ -26,7 +26,7 @@
 		<maven.compiler.target>1.6</maven.compiler.target>
 		<maven.compiler.source>1.6</maven.compiler.source>
 
-		<sonar.host.url>http://172.17.0.3:9000/</sonar.host.url>
+		<sonar.host.url>http://172.17.0.4:9000/</sonar.host.url>
 		<sonar.exclusions>src/main/webapp/****/*.js</sonar.exclusions>
 
 		<version.jacoco>0.7.8</version.jacoco>

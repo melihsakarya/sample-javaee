@@ -211,9 +211,9 @@
 				<artifactId>jboss-as-maven-plugin</artifactId>
 				<version>${version.jboss.maven.plugin}</version>
 				<configuration>
-					<hostname>172.17.0.4</hostname>
+					<hostname>172.17.0.6</hostname>
 					<username>admin</username>
-					<password>AIYdAz5FGruD</password>
+					<password>fhKLi3wCXs7g</password>
 					<port>9999</port>
 				</configuration>
 			</plugin>

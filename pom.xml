@@ -210,12 +210,13 @@
 				<groupId>org.jboss.as.plugins</groupId>
 				<artifactId>jboss-as-maven-plugin</artifactId>
 				<version>${version.jboss.maven.plugin}</version>
-				<configuration>
+				<!--<configuration>
 					<hostname>172.17.0.6</hostname>
 					<username>admin</username>
 					<password>fhKLi3wCXs7g</password>
 					<port>9999</port>
 				</configuration>
+				-->
 			</plugin>
 
 			<plugin>

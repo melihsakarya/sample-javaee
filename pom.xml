@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.saha.test</groupId>
 	<artifactId>sample-javaee</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<packaging>war</packaging>
 
 	<licenses>
@@ -26,7 +26,7 @@
 		<maven.compiler.target>1.6</maven.compiler.target>
 		<maven.compiler.source>1.6</maven.compiler.source>
 
-		<sonar.host.url>http://34.251.30.41:9000/</sonar.host.url>
+		<sonar.host.url>http://localhost:9000/</sonar.host.url>
 		<sonar.exclusions>src/main/webapp/****/*.js</sonar.exclusions>
 
 		<version.jacoco>0.7.8</version.jacoco>
@@ -210,6 +210,13 @@
 				<groupId>org.jboss.as.plugins</groupId>
 				<artifactId>jboss-as-maven-plugin</artifactId>
 				<version>${version.jboss.maven.plugin}</version>
+				<!--<configuration>
+					<hostname>172.17.0.6</hostname>
+					<username>admin</username>
+					<password>fhKLi3wCXs7g</password>
+					<port>9999</port>
+				</configuration>
+				-->
 			</plugin>
 
 			<plugin>
@@ -251,7 +258,7 @@
 			</properties>
 		</profile>
 
-		<!-- -Punit-test -->
+		<!-- -Punit-test  -->
 		<profile>
 			<id>unit-test</id>
 

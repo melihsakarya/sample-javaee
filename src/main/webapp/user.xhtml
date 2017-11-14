@@ -46,7 +46,7 @@
 <body>  
 	<p:panel header="Kullanici Tanimlama - THY">    
 		<p:messages autoUpdate="true"/>
-		<h:form id="userForm">
+		<h:form id="userForm" >
 			<h:panelGrid columns="2">
 				Ad : <p:inputText value="#{userBean.user.name}" id="name"/>
 				Soyad : <p:inputText value="#{userBean.user.lastname}" id="lastname"/>
@@ -57,7 +57,7 @@
 			</h:panelGrid>
 		</h:form>
 		
-		<h:form id="listForm">
+		<h:form id="listForm" prependId="false">
 			<p:dataTable value="#{userBean.userList}" var="kul" id="liste">
 				
 				<p:column headerText="Sil">

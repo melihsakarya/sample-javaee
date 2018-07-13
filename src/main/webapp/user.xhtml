@@ -52,7 +52,7 @@
 				Soyad : <p:inputText value="#{userBean.user.lastname}" id="lastname"/>
 				Yas : <p:inputText value="#{userBean.user.age}" id="age"/>
 			
-				<p:commandButton value="Kaydet-2" action="#{userBean.save}" update="@form :listForm" rendered="#{userBean.user.id == null}" id="save"/>
+				<p:commandButton value="Kaydet" action="#{userBean.save}" update="@form :listForm" rendered="#{userBean.user.id == null}" id="save"/>
 				<p:commandButton value="Düzenle" action="#{userBean.update}" update="@form :listForm" rendered="#{userBean.user.id != null}" id="update"/>
 			</h:panelGrid>
 		</h:form>

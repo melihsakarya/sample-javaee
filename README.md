@@ -1,5 +1,5 @@
 # sample-javaee
 Sample Java EE Integration Test Sample
-v8
+v9
 
 
